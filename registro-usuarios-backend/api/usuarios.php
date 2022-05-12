@@ -16,11 +16,12 @@ header("Content-Type: application/json");
 include_once("../clases/class-usuario.php");
 
 //Definimos variable para imprimir resultados
-$resultado["mensaje"] = "";
+
 
 //Evaluamos el método de la petición e imprimo el resultado. 
 switch($_SERVER['REQUEST_METHOD']){
     case 'POST':
+
         $_POST = json_decode(file_get_contents('php://input'),true);
         //Creamos una instancia del tipo usuario y le enviamos los datos que pide el constructor. 
         $usuario = new Usuario($_POST["nombre"], $_POST["apellido"], $_POST["fechaNacimiento"], $_POST["pais"]);
