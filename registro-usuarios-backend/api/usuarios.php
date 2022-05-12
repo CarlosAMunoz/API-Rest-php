@@ -11,7 +11,6 @@
 //echo "Información: " .file_get_contents('php://input');
 
 
-
 //Le indicamos al cliente que lo que le envío es un json
 header("Content-Type: application/json");
 include_once("../clases/class-usuario.php");
