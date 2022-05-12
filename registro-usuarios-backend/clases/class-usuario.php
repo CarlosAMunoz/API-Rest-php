@@ -97,6 +97,7 @@ class Usuario {
     }
 
     
+    //Acá escribimos nuestro archivo JSON
     // Para guardar un nuevo elemento en nuestro array, necesitamos trar toda la información del JSON y sobreescribirla. De lo contrario el Json no quedará con la sitaxis correcta. 
     public function guardarUsuario(){
         //Treaemos la información del archivo json
@@ -106,7 +107,7 @@ class Usuario {
         //Agregamos un elemento adicional a nuestro Array
         $usuarios[] = array(
 
-                "usuario"=> $this->nombre,
+                "nombre"=> $this->nombre,
                 "apellido"=> $this->apellido,
                 "fechaNacimiento"=> $this->fechaNacimiento,
                 "pais"=> $this->pais
